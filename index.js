@@ -8,6 +8,7 @@ app.use(cors());
 app.use(express.json());
 app.use(express.static('static'));
 
+// GET all employees
 app.get('/employees', async (req, res) => {
   const employees = getAllEmployees();
   res.json({ employees });
